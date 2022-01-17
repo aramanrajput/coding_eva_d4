@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import { Navbar } from './components/navbar';
+import  Navbar  from './components/navbar';
 import { Route,Routes } from 'react-router-dom';
 import { Login } from './components/login';
-import {Form} from "./components/home.jsx"
+import Form from "./components/home.jsx"
 
 function App() {
   return (
