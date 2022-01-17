@@ -31,7 +31,7 @@ fetch('http://localhost:3001/job',{
     },
     body:JSON.stringify({status:true,job:form}),
 }).then((d)=>d.json()).then((res)=>{
-    dispatch(addjob(form))
+    dispatch(addjob(res))
 }).catch((err)=>{
     console.log(err)
 })
