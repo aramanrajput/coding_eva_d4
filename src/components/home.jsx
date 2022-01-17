@@ -24,13 +24,20 @@ const Form=()=>{
     }
 
 const addjob = ()=>{
-    fetch("  http://localhost:3001/job",{method:"POST", body:JSON.stringify(form)})
-   .then((d)=>d.json())
-   .then((res)=>{
-dispatch(addjob(form))
-   })
-    console.log(form)
+fetch('http://localhost:3001/job',{
+    method:"POST",
+    headers:{
+        "Content-Type":"application/json"
+    },
+    body:JSON.stringify({status:true,job:form}),
+}).then((d)=>d.json()).then((res)=>{
+    dispatch(addjob(form))
+}).catch((err)=>{
+    console.log(err)
+})
 }
+   
+
 
 
     return(
